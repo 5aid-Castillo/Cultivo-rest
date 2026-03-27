@@ -10,7 +10,7 @@
       </p>
 
       <p class="date">
-        Volveremos a estar disponibles nuevamente el:
+        Volveremos a estar disponibles el:
         <strong>{{ formattedDate }} </strong>
       </p>
 
