@@ -1,16 +1,16 @@
 <template>
   <div class="maintenance-container">
     <div class="card">
-   
+      <img class="logo" src="../assets/cultivo-logo.png" alt="cultivo" />
       <h1>🚧 Estamos en mantenimiento</h1>
       
       <p class="message">
-        Estamos trabajando para mejorar tu experiencia. 
+        Trabajamos para mejorar tu experiencia. 
 
       </p>
 
       <p class="date">
-        Estaremos disponibles nuevamente el:
+        Volveremos a estar disponibles nuevamente el:
         <strong>{{ formattedDate }} </strong>
       </p>
 
@@ -18,7 +18,6 @@
         Gracias por tu paciencia 🤍
       </p>
 
-      <p class="extra">CULTIVO🌱</p>
     </div>
   </div>
 </template>
@@ -75,5 +74,20 @@ h1, h2 {
 .extra {
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 1.5rem;
+  border-radius: 30%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 </style>
