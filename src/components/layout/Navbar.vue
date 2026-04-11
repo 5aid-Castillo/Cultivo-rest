@@ -84,7 +84,8 @@ const closeMenu = () => {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 1.2rem 2rem;
-  background: rgba(0, 0, 0, 0.95);
+ /*  background: rgba(0, 0, 0, 0.95); */
+  background: rgba(27, 54, 102);
   position: relative;
   z-index: 1000;
   position: fixed;
@@ -238,8 +239,8 @@ const closeMenu = () => {
     right: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(31, 31, 31, 0.97);
-
+/*     background: rgba(31, 31, 31, 0.97); */
+    background: rgba(27, 54, 102, 0.97);
     flex-direction: column;
     justify-content: center;
     align-items: center;
