@@ -14,9 +14,9 @@
       </p>
 
       <div class="image-grid three-images">
-          <img src="../assets/IMG_5752.PNG" alt="Imagen Nosotros 1" />
-          <img src="../assets/IMG_5755.PNG" alt="Imagen Nosotros 2" />
-          <img src="../assets/IMG_1954.JPEG" alt="Imagen Nosotros 3" />
+          <img src="/IMG_5752.webp" alt="Imagen Nosotros 1" />
+          <img src="/IMG_5755.webp" alt="Imagen Nosotros 2" />
+          <img src="/IMG_1954.webp" alt="Imagen Nosotros 3" />
       </div>
     </section>
 
@@ -31,9 +31,9 @@
       </p>
 
       <div class="image-grid three-images">
-        <img src="../assets/IMG_4921.JPEG" alt="Imagen Menú 1" />
-        <img src="../assets/IMG_9064.JPEG" alt="Imagen Menú 2" />
-        <img src="../assets/IMG_4979.JPEG" alt="Imagen Menú 3" />
+        <img src="/IMG_4921.webp" alt="Imagen Menú 1" />
+        <img src="/IMG_9064.webp" alt="Imagen Menú 2" />
+        <img src="/IMG_4979.webp" alt="Imagen Menú 3" />
       </div>
     </section>
 
@@ -51,9 +51,9 @@
       </p>
 
       <div class="image-grid two-images">
-          <img src="../assets/IMG_4230.JPEG" alt="Imagen Riego 1" />
-          <img src="../assets/IMG_2022.JPG.jpeg" alt="Imagen Riego 2" />
-          <img src="../assets/IMG_5676.JPEG" alt="Imagen Riego 3" />
+          <img src="/IMG_4230.webp" alt="Imagen Riego 1" />
+          <img src="/IMG_2022.JPG.webp" alt="Imagen Riego 2" />
+          <img src="/IMG_5676.webp" alt="Imagen Riego 3" />
       </div>
     </section>
 

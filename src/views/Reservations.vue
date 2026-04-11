@@ -1,7 +1,7 @@
 <template>
   <div class="reservations-container">
     <div class="reservations-image">
-      <img src="../assets/hero-image.jpg" alt="Reservaciones" />
+      <img src="/hero-image.webp" alt="Reservaciones" />
     </div>
 
     <div class="reservations-content">

@@ -1,73 +1,70 @@
 <template>
   <section class="gallery">
-
     <h2 class="gallery-title">{{ $t("gallery.title") }}</h2>
 
     <div class="gallery-grid">
-      <div
-        v-for="(img, index) in images"
-        :key="index"
-        class="gallery-item"
-      >
-      <div v-if="!loaded[index]" class="skeleton"></div>
-         <img
-    :src="img"
-    alt="gallery image"
-    @load="onLoad(index)"
-    :class="{ show: loaded[index] }"
-  />
+      <div v-for="(img, index) in images" :key="index" class="gallery-item">
+        <div v-if="!loaded[index]" class="skeleton"></div>
+        <img
+          :src="img"
+          alt="gallery image"
+          loading="lazy"
+          @load="onLoad(index)"
+          :class="{ show: loaded[index] }"
+        />
       </div>
     </div>
-
   </section>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
-const loaded = ref<boolean[]>([])
+import { ref } from "vue";
+const loaded = ref<boolean[]>([]);
 
 const images = [
-  new URL('../assets/IMG_4943.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_4933.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_5705.JPEG', import.meta.url).href,
- 
-  new URL('../assets/IMG_5697.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_5695.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_5702.JPEG', import.meta.url).href,
-  
-  new URL('../assets/IMG_9086.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_9091.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_9093.JPEG', import.meta.url).href,
-  
-  new URL('../assets/IMG_4378.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_4379.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_4381.JPEG', import.meta.url).href,
-  
-  new URL('../assets/IMG_4935.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_4295.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_1918.JPEG', import.meta.url).href,
-  
-  new URL('../assets/IMG_1968.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_1972.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_1974.JPEG', import.meta.url).href,
-  
-  new URL('../assets/IMG_5759.JPG.jpeg', import.meta.url).href,
-  new URL('../assets/IMG_5708.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_5687.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_5719.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_5716.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_9064.JPEG', import.meta.url).href,
-  new URL('../assets/IMG_9105.JPEG', import.meta.url).href,
-  ];
-  const onLoad = (index: number) => {
-    loaded.value[index] = true
-  }
+  "/IMG_4943.webp",
+  "/IMG_4933.webp",
+  "/IMG_5705.webp",
+
+  "/IMG_5697.webp",
+  "/IMG_5695.webp",
+  "/IMG_5702.webp",
+
+  "/IMG_9086.webp",
+  "/IMG_9091.webp",
+  "/IMG_9093.webp",
+
+  "/IMG_4378.webp",
+  "/IMG_4379.webp",
+  "/IMG_4381.webp",
+
+  "/IMG_4935.webp",
+  "/IMG_4295.webp",
+  "/IMG_1918.webp",
+
+  "/IMG_1968.webp",
+  "/IMG_1972.webp",
+  "/IMG_1974.webp",
+
+  "/IMG_5759.JPG.webp",
+  "/IMG_5708.webp",
+  "/IMG_5687.webp",
+  "/IMG_5719.webp",
+  "/IMG_5716.webp",
+  "/IMG_9064.webp",
+  "/IMG_9105.webp",
+];
+const onLoad = (index: number) => {
+  loaded.value[index] = true;
+};
 </script>
 
 <style scoped>
 .gallery {
   padding: 100px 2rem;
-  background: #0f0f0f;
+  background: rgba(0, 0, 0, 0.95);
   min-height: 100vh;
+  margin-top: -0.7rem;
+  margin-bottom: -1rem;
 }
 
 /* TÍTULO */
@@ -100,7 +97,9 @@ const images = [
   width: 100%;
   display: block;
   border-radius: 12px;
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
 /* HOVER PREMIUM */
@@ -111,7 +110,7 @@ const images = [
 
 /* EFECTO OVERLAY */
 .gallery-item::after {
-/*   content: "Ver más"; */
+  /*   content: "Ver más"; */
   position: absolute;
   bottom: 10px;
   left: 15px;
@@ -128,12 +127,7 @@ const images = [
   width: 100%;
   height: 250px;
   border-radius: 12px;
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
@@ -148,7 +142,10 @@ const images = [
 }
 .gallery-item img {
   opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
 .gallery-item img.show {

@@ -66,8 +66,7 @@ const year = new Date().getFullYear()
   background: rgba(27, 54, 102);
   backdrop-filter: blur(10px);
   color: white;
-  padding: 2rem 1.5rem 1rem;
-  margin-top: 3rem;
+  padding: 2rem 1.5rem 3rem 1rem;
 }
 
 .footer-content {

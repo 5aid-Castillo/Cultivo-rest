@@ -20,7 +20,7 @@
 
 <script setup>
 import { ref } from "vue";
-import imageSrc from "../assets/IMG_1897.JPEG";
+import imageSrc from "/IMG_1897.webp";
 
 const loading = ref(true);
 
@@ -51,7 +51,7 @@ function checkReady() {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-
+  margin-top:-1rem;
   display: flex;
   align-items: center;
   justify-content: center;
