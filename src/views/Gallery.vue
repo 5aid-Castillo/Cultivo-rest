@@ -3,7 +3,7 @@
     <h2 class="gallery-title">{{ $t("gallery.title") }}</h2>
 
     <div class="gallery-grid">
-      <div v-for="(img, index) in images" :key="index" class="gallery-item">
+      <div v-for="(img, index) in visibleImages" :key="index" class="gallery-item">
         <div v-if="!loaded[index]" class="skeleton"></div>
         <img
           :src="img"
@@ -14,9 +14,11 @@
         />
       </div>
     </div>
+    <div ref="loadMoreTrigger"></div>
   </section>
 </template>
 <script setup lang="ts">
+import { computed, onMounted } from "vue";
 import { ref } from "vue";
 const loaded = ref<boolean[]>([]);
 
@@ -56,6 +58,27 @@ const images = [
 const onLoad = (index: number) => {
   loaded.value[index] = true;
 };
+
+const batchSize = 6;
+const visibleCount = ref(batchSize);
+
+const visibleImages = computed(() =>
+  images.slice(0, visibleCount.value)
+);
+
+const loadMoreTrigger = ref<HTMLElement | null>(null);
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      visibleCount.value += batchSize;
+    }
+  });
+
+  if (loadMoreTrigger.value) {
+    observer.observe(loadMoreTrigger.value);
+  }
+});
 </script>
 
 <style scoped>
