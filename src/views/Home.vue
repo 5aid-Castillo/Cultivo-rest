@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <!-- Fondo blur -->
-    <img :src="imageSrc" class="bg-blur" />
+    <!-- <img :src="imageSrc" class="bg-blur" /> -->
 
     <!-- Imagen principal -->
     <img :src="imageSrc" @load="handleLoad" :class="['bg-image', { show: !loading }]" alt="background" />
@@ -56,7 +56,7 @@ function checkReady() {
   align-items: center;
   justify-content: center;
 
-  background: #0f0f0f;
+  background: rgba(27, 54, 102);
 }
 
 /* Fondo desenfocado */
